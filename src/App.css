@@ -1,38 +1,103 @@
-.App {
-  text-align: center;
+:root {
+    --main-bg-color: #C6E2FF;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+    color: var(--main-bg-color);
+    background-color: var(--main-bg-color);
+    transition: background-color 600ms ease;
+    transition: color 600ms ease;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#quote-box {
+    background-color: white;
+    margin: 0 auto 0;
+    padding: 60px;
+    max-width: 600px;
+    min-height: 200px;
+    height: auto;
 }
 
-.App-link {
-  color: #61dafb;
+.quote-text {
+    text-align: center;
+    font-size: 40px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.quote-author {
+    font-weight: 300;
+    text-align: right;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+#new-quote {
+    color: var(--main-bg-color);
+    border: none;
+    background-color: white;
+    padding: 12px 11px;
+    position: absolute;
+    right: 48%;
+    bottom: calc(50% - 353px);
+}
+
+#tweet-quote {
+    color: var(--main-bg-color);
+    font-size: 16px;
+}
+
+#tweet-quote:hover {
+    color: var(--main-bg-color);
+    cursor: pointer;
+}
+
+#tweet-quote:active {
+    color: var(--main-bg-color);
+}
+
+@media only screen and (max-width: 801px) {
+
+    #quote-box {
+        margin: 30px;
+    }
+
+    .quote-text {
+        font-size: 30px;
+    }
+
+    .quote-author {
+
+        font-size: 16px;
+    }
+
+    #new-quote {
+        right: 42%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    #quote-box {
+        margin: 10px;
+    }
+
+    .quote-text {
+        font-size: 20px;
+    }
+
+    .quote-author {
+
+        font-size: 14px;
+    }
+
+    #new-quote {
+        right: 31%;
+    }
 }
